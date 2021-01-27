@@ -1,13 +1,9 @@
 package hello.hellospring;
 
-import javax.persistence.EntityManager;
-import javax.sql.DataSource;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import hello.hellospring.repository.JpaMemberRepository;
 import hello.hellospring.repository.MemberRepository;
 import hello.hellospring.service.MemberService;
 
@@ -30,6 +26,11 @@ public class SpringConfig {
 
     @Bean
     public MemberService memberService() { return new MemberService(memberRepository); }
+
+
+//    public TimeTraceAop timeTraceAop() {
+//        return new TimeTraceAop();
+//    }
 
 //    @Bean
 //    public JpaMemberRepository memberRepository() { // return new MemoryMemberRepository();
